@@ -46,14 +46,14 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 			// 代理跨域（mock 不需要配置跨域，直接能访问，这里只是个示例）
 			proxy: {
 				"/api": {
-					target: "http://0.0.0.0:8001", // fastmock
-					// target: "https://mock.mengxuegu.com/mock/629d727e6163854a32e8307e", // easymock
+					target: "http://42.192.148.228:8001", // fastmock
+					// target: "http://0.0.0.0:8001", // easymock
 					changeOrigin: true,
 					rewrite: path => path.replace(/^\/api/, "/api")
 				},
 				"/media": {
-					target: "http://0.0.0.0:8001", // fastmock
-					// target: "https://mock.mengxuegu.com/mock/629d727e6163854a32e8307e", // easymock
+					target: "http://42.192.148.228:8001", // fastmock
+					// target: "http://0.0.0.0:8001", // easymock
 					changeOrigin: true,
 					rewrite: path => path.replace(/^\/media/, "/media")
 				}
